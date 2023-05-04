@@ -1,43 +1,45 @@
-Final Project - MAP/Path PEAS
-Kumiko Sawada
+# MAP AI
+###  super simplified MAP environment with AI model
+###### 
+
+## Emphasis
+AI is the simulation of human intelligence processes by machines, especially computer systems.  Recently, the term Artificial Intelligent (AI) has become more common even outside of the technology industry.   A couple months ago, there was a headline in the Japan Economic News Paper, saying that AI can find the quality of taste in milk made from cabbage.  AI technology is now used in many areas.   
+
+ AI  helps us solve problems of various complexities.  As a final project for CS4300, I choose to create a very simplified version of Map AI using A star search algorithm in python.  Here in St George, I have to drive for a living though driving is not something I am good at.  I always use GPS on google map to find the fastest path to the destination, since I am still not very familiar with the directions or the rush hours.  Through this project, I would like to create AI to find the shortest path from where you are to the destination. 
+
+## Simplified Map
+* Generates map with randomly placed obstacles 
+* Set the size of the map (square - width and * height are the same length)
+* Goal is always at [-1, -1]
+* Start is always at [0, 0]
+
+## The AI Algorithms
+
+* MinMax
+* AlphaBeta 
+* Random 
+
+### The Percepts
+* Map
+* Start location
+* Final destination
+
+### The Rewards
+* every step: -1
+* when Mario die: -1000
+
+### The Actions
+Directions
+1. North
+2. South
+3. West
+4. East
+5. North-west
+6. North-east
+7. South-west
+8. South-east
 
 
-Problem: 
-My morning is very busy.  Even after I finally leave the house,  I have to drop my daughter off at school, then go to the class at UT.  However, I always wonder if there is an shortest path in the morning route without using google map gps.  In this project, I would like to create a map to find the shortest route from start point to the destination using AI.   	
+## Links
 
-	AI automatically evaluates the shortest path to the destination using A * search.
-
-The Percepts (Sensors):
-map, edge, start location, final destination, direction(up, up_right, up_left, right, left, down, down_right, down_left)
-
-The Actions (Actuators):
-Evaluate the shortest way to go if you go north, south, west, east
-Then move forward to take the shortest path
-
-The Percept:
-The Environment is:
-	Observability : Fully Observable 
-	You can access to a whole map to the destination
-
-	Uncertainly : Stochastic 
-	The best path would not always be the same depending on road conditions, time of the day, traffic, and how many stops you make.
-
-	Duration : Episodic
-	Each map has different data and Agent re-calculate for the other map.
-
-	Stability : Dynamic
-	The map with the road environment and the path are always changing.
-
-	Granularity : Discrete
-	The map is not infinite.  Once you reach the goal, it is done.
-	
-	Participants : Single Agent 
-	Only one agent can calculate the best time for the map using an A* search algorithm.
- 
-	Knowledge : Known.
-	The formula is known.  Since it uses many kinds of data from everywhere, it is hard for humans to evaluate however it is possible using formulas.
-
-
-The Performance Measure:
-	Get the shortest path from start to the destination - 
-
+https://github.com/ksawada1/ksawada-school-projects/tree/main/MapAI
